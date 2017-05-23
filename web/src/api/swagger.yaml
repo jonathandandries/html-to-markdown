@@ -1,0 +1,39 @@
+---
+swagger: "2.0"
+info:
+  description: "Convert HTML formatted text to equivalent Markdown format."
+  version: "1.0.0"
+  title: "html-to-markdown"
+  termsOfService: "http://opensource-template.wikidot.com/legal:terms-of-use"
+  contact:
+    email: "jonathandandries@gmail.com"
+  license:
+    name: "MIT"
+    url: "https://opensource.org/licenses/MIT"
+host: "localhost:8080"
+basePath: "/v1"
+schemes:
+- "http"
+paths:
+  /to-markdown:
+    post:
+      summary: "Convert HTML to Markdown"
+      description: "Returns the resulting markdown content"
+      operationId: "htmlToMarkdown"
+      consumes:
+      - "text/html"
+      - "text/plain"
+      produces:
+      - "text/markdown"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "HTML to reformat as Markdown"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        405:
+          description: "Invalid input"
+      x-swagger-router-controller: "Default"
+definitions: {}
