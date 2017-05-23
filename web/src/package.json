@@ -1,0 +1,14 @@
+{
+  "name": "html-to-markdown",
+  "version": "1.0.0",
+  "description": "Convert HTML formatted text to equivalent Markdown format.",
+  "author": "Jonathan D'Andries <jonathandandries@gmail.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "to-markdown": "^3.0.4"
+  }
+}

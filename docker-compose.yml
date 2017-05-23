@@ -1,0 +1,35 @@
+version: "3"
+services:
+  web:
+    build: ./web
+    image: jonathandandries/html-to-markdown:v1.0.0
+    container_name: html-to-markdown
+    ports:
+      - "8080:8080"
+    volumes:
+      # DEVELOPMENT environment
+      # Mount our application src code directory
+      # NOTE that the image will have installed packages in the node_modules
+      # subdirectory of the applicaiton src code. We don't want the developers
+      # to have this directory on their host computer, so we need to map another
+      # persistent volume for the app/node_modules so that it is not overwritten
+      # when we mapp the app/ directory that doesn't contain it.
+      - ./web/src/:/usr/src/app
+      - node_modules:/usr/src/app/node_modules
+    # DEVELOPMENT environment
+    # Run using nodemon so that we can edit the node-js application on the host
+    # computer and see the results immediately in the container.
+    command: nodemon -L
+
+volumes:
+  data-volume:
+
+
+
+
+
+  NODEJS_EXAMPLE_VOLUME_MOUNT="-v $PWD/src:/usr/src/app "\
+"-v node_modules:/usr/src/app/node_modules"
+
+
+  NODEJS_EXAMPLE_RUN_CMD=""
