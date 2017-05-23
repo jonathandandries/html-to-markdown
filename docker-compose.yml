@@ -22,14 +22,4 @@ services:
     command: nodemon -L
 
 volumes:
-  data-volume:
-
-
-
-
-
-  NODEJS_EXAMPLE_VOLUME_MOUNT="-v $PWD/src:/usr/src/app "\
-"-v node_modules:/usr/src/app/node_modules"
-
-
-  NODEJS_EXAMPLE_RUN_CMD=""
+  node_modules:
