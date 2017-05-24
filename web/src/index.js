@@ -5,9 +5,10 @@ const http = require('http');
 const swaggerTools = require('swagger-tools');
 const jsyaml = require('js-yaml');
 const fs = require('fs');
-const actuator = require('express-actuator');
 
 const serverPort = 8080;
+
+console.log("NODE_ENV: " + process.env.NODE_ENV);
 
 // swaggerRouter configuration
 var options = {

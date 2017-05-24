@@ -17,6 +17,8 @@ services:
       # when we mapp the app/ directory that doesn't contain it.
       - ./web/src/:/usr/src/app
       - node_modules:/usr/src/app/node_modules
+    environment:
+      - NODE_ENV=development
     # DEVELOPMENT environment
     # Run using nodemon so that we can edit the node-js application on the host
     # computer and see the results immediately in the container.
