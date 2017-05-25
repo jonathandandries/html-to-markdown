@@ -54,6 +54,8 @@ External References:
 * A template for Github READMEs (Markdown) + Sublime Snippet: https://gist.github.com/zenorocha/4526327
 * This project leverages the mega-awesome [swagger-tools](https://github.com/apigee-127/swagger-tools) middleware which does most all the work.
 * swagger.yaml generator: http://editor.swagger.io/
+* to-markdown: http://domchristie.github.io/to-markdown/
+* node-lambda: https://www.npmjs.com/package/node-lambda
 
 ## License
 Gratis and libre.
