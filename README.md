@@ -25,10 +25,8 @@ docker-compose build --no-cache
 docker-compose up -d
 ```
 
-```bash
-# View the Swagger UI interface:
-open http://localhost:3000/docs/#!/default/htmlToMarkdown
-```
+View the Swagger UI interface:
+http://localhost:3000/docs/#!/default/htmlToMarkdown
 
 ```bash
 # Bring down the container
