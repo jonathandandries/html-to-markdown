@@ -8,8 +8,6 @@ const fs = require('fs');
 
 const serverPort = 8080;
 
-console.log("NODE_ENV: " + process.env.NODE_ENV);
-
 // swaggerRouter configuration
 var options = {
   swaggerUi: '/swagger.json',
@@ -37,7 +35,19 @@ swaggerTools.initializeMiddleware(swaggerDoc, function (middleware) {
 
   // Start the server
   http.createServer(app).listen(serverPort, function () {
+    console.log("NODE_ENV: " + process.env.NODE_ENV);
     console.log('Your server is listening on port %d (http://localhost:%d)', serverPort, serverPort);
     console.log('Swagger-ui is available on http://localhost:%d/docs', serverPort);
   });
 });
+
+exports.handler = (event, context, callback) => {
+    var markdown="Hello World!";
+    console.log(markdown);
+    var response = {
+        statusCode: 200,
+        headers: {},
+        body: JSON.stringify(markdown)
+    };
+    callback(null, response);
+};

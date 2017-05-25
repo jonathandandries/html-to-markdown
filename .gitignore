@@ -1,2 +1,6 @@
 web/src/node_modules/
 web/src/npm-debug.log
+.env
+deploy.env
+event.json
+.lambda

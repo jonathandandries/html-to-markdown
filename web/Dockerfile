@@ -4,6 +4,8 @@ FROM node:boron
 
 MAINTAINER "Jonathan D'Andries" <jonathandandries@gmail.com> (https://github.com/jonathandandries)
 
+RUN apt-get update && apt-get install -y rsync zip
+
 # Create app directory
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
