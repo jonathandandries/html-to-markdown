@@ -4,6 +4,7 @@ FROM node:boron
 
 MAINTAINER "Jonathan D'Andries" <jonathandandries@gmail.com> (https://github.com/jonathandandries)
 
+# rsync and zip are used by node-lambda to package our app for AWS.
 RUN apt-get update && apt-get install -y rsync zip
 
 # Create app directory
@@ -20,7 +21,7 @@ RUN npm install
 # Bundle app source
 COPY src/ /usr/src/app/
 
-EXPOSE 8080
+EXPOSE 3000 5858
 
 # Non-root user important for OpenShift
 USER node

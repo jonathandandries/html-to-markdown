@@ -6,7 +6,8 @@ services:
     image: jonathandandries/html-to-markdown:v1.0.0
     container_name: html-to-markdown
     ports:
-      - "8080:8080"
+      - "3000:3000"
+      - "5858:5858"
     volumes:
       # DEVELOPMENT environment
       # Mount our application src code directory
