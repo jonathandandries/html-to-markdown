@@ -27,7 +27,7 @@ docker-compose up -d
 
 ```bash
 # View the Swagger UI interface:
-open http://localhost:3000/docs
+open http://localhost:3000/docs/#!/default/htmlToMarkdown
 ```
 
 ```bash
