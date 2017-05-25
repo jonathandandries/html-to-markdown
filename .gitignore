@@ -1,5 +1,6 @@
 web/src/node_modules/
 web/src/npm-debug.log
+web/src/build/
 .env
 deploy.env
 event.json
