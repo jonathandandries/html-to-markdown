@@ -40,14 +40,3 @@ swaggerTools.initializeMiddleware(swaggerDoc, function (middleware) {
     console.log('Swagger-ui is available on http://localhost:%d/docs', serverPort);
   });
 });
-
-exports.handler = (event, context, callback) => {
-    var markdown="Hello World!";
-    console.log(markdown);
-    var response = {
-        statusCode: 200,
-        headers: {},
-        body: JSON.stringify(markdown)
-    };
-    callback(null, response);
-};
